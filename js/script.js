@@ -46,8 +46,12 @@ window.addEventListener('DOMContentLoaded', () => {
     sliderWrapper.style.overflow = 'hidden';
     sliderField.style.transform = 'translateX(0px)';
 
+    // function deleteNotDigits(str) {
+    //     return +str.replace(/\D/g, '');
+    // }
+
     function deleteNotDigits(str) {
-        return +str.replace(/\D/g, '');
+        return Math.round(str.replace(/px/g, ''));
     }
 
     next.addEventListener('click', () => {
@@ -87,6 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
     
             sliderIndex = slideTo;
             offset = deleteNotDigits(width) * (sliderIndex - 1);
+            console.log(deleteNotDigits(width));
             sliderField.style.transform = `translateX(-${offset}px)`;
     
             setActiveDot();

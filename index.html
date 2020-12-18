@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo" id="up">
+    <section data-promo class="promo" id="up">
         <div class="container">
             <header class="header">
                 <div class="header__logo">
@@ -41,6 +41,7 @@
                 <span></span>
             </div>    
         </header>
+        <div class="menu_overlay"></div>
         <div class="promo__subheader">Global Opt - логистика полного цикла из Китая в Россию</div>
         <h1 class="promo__title">ДОСТАВКА ГРУЗОВ ИЗ КИТАЯ</h1>
         <h2 class="promo__subtitle">В РОССИЮ И СНГ ВСЕМИ ВИДАМИ ТРАНСПОРТА</h2>
@@ -216,7 +217,7 @@
                                 с прохождением таможни </div>
                                 <button class="button button_details">Подробнее</button>
                             </div> 
-                            <div class="prices__info animate__animated animate__fadeInUp">
+                            <div class="prices__info animate__animated animate__fadeInDown">
                                 <ul class="prices__list">
                                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </li>
                                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </li>
@@ -377,7 +378,9 @@
             <div class="redline"></div>
             <div class="subtitle">Мы всегда стараемся помочь клиентам, что бы они обращались к нам снова</div>
         <div class="feed-back__carousel">
-            <div class="feed-back__inner">
+            <div class="feed-back__arrowNext"><img src="icons/arrow.next.png" alt="arrowNext"></div>
+            <div class="feed-back__arrowPrev"><img src="icons/arrow.prev.png" alt="arrowPrev"></div>
+            <div class="feed-back__inner" onmousedown="return false" onselectstart="return false">
                 <div class="feed-back__item">
                     <div class="feed-back__img"><img src="images/newer/feedback.olga.jpg" alt="olga"></div>
                     <div class="feed-back__name">Анисимова Ольга</div>
@@ -394,7 +397,13 @@
                     <div class="feed-back__review">Хочу рассказать о компании Global Opt. Самое главное что меня радует, это быстрый поиск и анализ определенного товара. Доставляла через компанию уже много раз, от расходных материалов для отеля, ло дольших партий детской одежды. Буду продолжать пользтваьбся услугами даной компании</div>
                 </div>
             </div>
+            <ol class="feed-back__indicators">
+                <li class="feed-back__dot" data-slide-to="1"></li>
+                <li class="feed-back__dot" data-slide-to="2"></li>
+                <li class="feed-back__dot" data-slide-to="3"></li>
+            </ol>
         </div>
+        
     </div>
     </section>
     <section class="questions">
@@ -450,6 +459,7 @@
             Наш менеджер свяжется с вами в ближайшее время! </div>
         </div>
     </div>
+
     <a href="#up" class="pageup"><img src="icons/chevron-circle-up.svg" alt="up"></a>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
